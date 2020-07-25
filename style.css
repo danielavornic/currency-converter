@@ -1,0 +1,53 @@
+body {
+    background-color: #F0F0F3;
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #25457A;
+    margin: 48px 0;
+}
+
+.section {
+    background: #F0F0F3;
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
+    width: 80%;
+}
+
+#fromSection {
+    margin-left: 20%;
+}
+
+#toSection {
+    margin-right: 20%;
+}
+
+.amount {
+    padding: 60px 25px;
+    background-color: #F0F0F3;
+    border-radius: 0 0 10px 10px;
+}
+
+select {
+    background: #728AB7;
+    border-radius: 10px 10px 0px 0px;
+    padding: 24px 16px;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%
+}
+
+input {
+    width: 100%;
+    font-size: 36px;
+    text-align: center;
+    color: #728AB7;
+    background: transparent;
+    border: none;
+    outline: none
+}
