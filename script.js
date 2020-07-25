@@ -13,4 +13,13 @@ $('document').ready(function() {
     }
 
     getRates('USD', 'EUR');
+
+    $('input').toArray().forEach(function(field) {
+        new Cleave(field, {
+            numericOnly: true,
+            numeral: true,
+            numeralThousandsGroupStyle: 'thousand'
+        });
+    });
+
 })
