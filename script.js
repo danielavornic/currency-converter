@@ -34,6 +34,7 @@ function result(base, rate) {
             numeralThousandsGroupStyle: 'thousand'
         });
     });
+    rates();
 }
 
 function reverseResult(base, rate) {
@@ -54,30 +55,24 @@ function rates() {
         $('#currencyTo').text(symbolTo);
         $('#rateFrom').text('1 ' + symbolFrom + ' = ' + rateFrom.toFixed(4) + ' ' + $('#toSection .options select').val());
         $('#rateTo').text('1 ' + symbolTo + ' = ' + rateTo.toFixed(4) + ' ' + $('#fromSection .options select').val());
-    }, 400)
+    }, 200)
 }
 
 $('document').ready(function() {
     getRates();
-    rates();
 
     $('#amountFrom').keyup(function() {getRates()})
     $('#amountTo').keyup(function() {getRates(true)})
-    $('.options select').change(function() { 
-        getRates(); 
-        rates();
-    })
+    $('.options select').change(function() { getRates()})
 
     $('#switch').click(function() {
         var fromCurrency = $('#fromSection .options select').val();
         var symbol = $('#currencyFrom').text();
-
         $('#fromSection .options select').val($('#toSection .options select').val());
         $('#currencyFrom').text($('#currencyTo').text());
         $('#toSection .options select').val(fromCurrency);
         $('#currencyTo').text(symbol);
 
         getRates();
-        rates();
     })
 })
