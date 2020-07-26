@@ -7,26 +7,26 @@ h1 {
     font-size: 48px;
     font-weight: 800;
     color: #25457A;
-    margin: 48px 0;
+    margin: 60px 0 54px;
 }
 
 .section {
     background: #F0F0F3;
     border-radius: 10px;
     box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
-    width: 80%;
+    width: 86%;
 }
 
 #fromSection {
-    margin-left: 20%;
+    margin-left: 12%;
 }
 
 #toSection {
-    margin-right: 20%;
+    margin-right: 12%;
 }
 
 .amount {
-    padding: 72px 25px;
+    padding: 80px 24px;
     background-color: #F0F0F3;
     border-radius: 0 0 10px 10px;
 }
@@ -102,5 +102,81 @@ input {
 }
 
 #rateFrom {
-    margin-left: 20%;
+    margin-left: 12%;
+}
+
+@media (min-width: 1440px) {
+    h1 {
+        margin-top: 140px;
+    }
+}
+
+@media (max-width: 991px) {
+    .section {
+        width: 100%;
+    }
+    
+    #fromSection, #toSection {
+        margin: 0
+    }
+
+    #amountFrom, #amountTo {
+        margin-right: 0;
+    }
+
+    #rateFrom {
+        margin-left: 0
+    }
+}
+
+@media (max-width: 768px) {
+    input {
+        width: 88%;
+    }
+
+    .col-md-2 {
+        margin: 48px 0 72px;
+    }
+
+    #switch {
+        transform: rotate(90deg);
+        left: 45%
+    }
+
+    h1 {
+        font-size: 40px;
+        margin-top: 40px
+    }
+
+    .rate {
+        text-align: center
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 36px;
+        margin: 36px 0;
+    }
+
+    .amount {
+        padding: 36px 24px;
+    }
+
+    input {
+        width: 82%;
+    }
+
+    select {
+        padding: 20px 16px;
+        font-size: 18px
+    }
+
+    .rate {
+        font-size: 18px
+    }
+
+    .col-md-2 {
+        margin: 24px 0 72px;
+    }
 }
