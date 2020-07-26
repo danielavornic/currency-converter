@@ -10,7 +10,7 @@ function getRates(reverse) {
     access_key = '7803ae90ffab404bd0fa8c957abd2b0a';
     $.ajax({
         url: 'http://data.fixer.io/api/' + endpoint + '?access_key=' + access_key,   
-        dataType: 'json',
+        dataType: 'jsonp',
         success: function(json) {
             base = json.rates[fromCurrency];
             rate = json.rates[toCurrency];
@@ -54,7 +54,7 @@ function rates() {
         $('#currencyTo').text(symbolTo);
         $('#rateFrom').text('1 ' + symbolFrom + ' = ' + rateFrom.toFixed(4) + ' ' + $('#toSection .options select').val());
         $('#rateTo').text('1 ' + symbolTo + ' = ' + rateTo.toFixed(4) + ' ' + $('#fromSection .options select').val());
-    }, 300)
+    }, 400)
 }
 
 $('document').ready(function() {
