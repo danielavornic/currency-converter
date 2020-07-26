@@ -59,7 +59,7 @@ input {
 }
 
 .currencyVal {
-    color: #728AB7;
+    color: #A6A5A3;
     font-size: 20px;
     display: inline;
     vertical-align: text-bottom;
@@ -89,4 +89,14 @@ input {
 
 .arrow-right { 
     border-left: 16px solid #728AB7;
+}
+
+.rate {
+    color: #728AB7;
+    margin-top: 28px;
+    font-size: 20px;
+}
+
+#rateFrom {
+    margin-left: 20%;
 }
