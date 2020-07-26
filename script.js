@@ -57,4 +57,17 @@ $('document').ready(function() {
         $('#currencyTo').text($('#toSection .options select').val())
     })
 
+    $('#switch').click(function() {
+        var fromCurrency = $('#fromSection .options select').val();
+        var symbol = $('#currencyFrom').text();
+
+        $('#fromSection .options select').val($('#toSection .options select').val());
+        $('#currencyFrom').text($('#currencyTo').text());
+
+        $('#toSection .options select').val(fromCurrency);
+        $('#currencyTo').text(symbol);
+
+        getRates()
+    })
+
 })
