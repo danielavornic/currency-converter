@@ -47,6 +47,14 @@ $('document').ready(function() {
 
     $('#amountFrom').keyup(function() {getRates()})
     $('#amountTo').keyup(function() {getRates(true)})
-    $('.options select').change(function() {getRates()})
+    $('.options select').change(function() { getRates(); })
+
+    $('#fromSection .options select').change(function() {
+        $('#currencyFrom').text($('#fromSection .options select').val())
+    })
+
+    $('#toSection .options select').change(function() {
+        $('#currencyTo').text($('#toSection .options select').val())
+    })
 
 })
