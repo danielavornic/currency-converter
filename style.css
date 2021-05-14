@@ -105,6 +105,10 @@ input {
     margin-left: 12%;
 }
 
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+    display: none;
+}
+
 @media (min-width: 1440px) {
     h1 {
         margin-top: 140px;
